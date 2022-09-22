@@ -1,0 +1,118 @@
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<nav class="">
+
+   
+  <ul class="navbar-ul">
+    <li>
+      <img
+        src="https://bootdey.com/img/Content/avatar/avatar3.png"
+        width="30px"
+        style="border-radius: 20px"
+      />
+    </li>
+    <li>
+      <h2 routerLink="profile" (click)="profile()" class="navbar-brand">
+        {{ userName }}
+      </h2>
+    </li>
+    <li>
+      <input
+        class="searchinput"
+        autocomplete="off"
+        (keydown)="search()"
+        type="search"
+        placeholder="Search . . ."
+      />
+    </li>
+  </ul>
+  <ul class="navbar-ul">
+    <li>
+      <a
+      class="nav-link noselect"
+      aria-current="page"
+      (click)="explore()"
+      style="cursor: pointer"
+      ><i class="fa-brands fa-wpexplorer fa-xl me-1 ms-1 fa-fw"></i
+    ></a>
+    </li>
+    <li>
+      <a
+      class="nav-link noselect"
+      aria-current="page"
+      (click)="explore()"
+      style="cursor: pointer"
+      ><i class="fa-solid fa-house fa-xl me-1 ms-1 fa-fw"></i
+    ></a>
+
+    <a
+    class="nav-link noselect"
+    data-toggle="tooltip"
+    data-placement="top"
+    title="Messages"
+    aria-current="page"
+    (click)="explore()"
+    style="cursor: pointer"
+    ><i class="fa-solid me-2 fa-paper-plane fa-xl me-1 ms-1 fa-fw"></i
+  ></a>
+
+    </li>
+    <li>
+      
+      <a
+      class="nav-link noselect"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Friend requests"
+      aria-current="page"
+      (click)="explore()"
+      style="cursor: pointer"
+      ><i class="fa-solid me-1 fa-user-group fa-xl me-1 ms-1 fa-fw"></i>
+    </a>
+    </li>
+    <li>
+      
+      <a
+      class="nav-link noselect"
+      data-toggle="tooltip"
+      data-placement="top"
+      title="Notifications"
+      aria-current="page"
+      (click)="explore()"
+      style="cursor: pointer"
+      ><i class="fa-solid me-1 fa-bell fa-xl me-1 ms-1 fa-fw"></i>
+    </a>
+    </li>
+  </ul>
+    <li>
+      <a
+      class="noselect nav-link logout"
+      (click)="logout()"
+      a-toggle="tooltip"
+      data-placement="top"
+      title="Exit"
+      ><i class="fa-solid fa-arrow-right"></i>
+    </a>
+    </li>
+
+
+
+         
+   
+        
+
+
+  
+         
+
+
+       
+ 
+       
+     
+   
+
+         
+     
+</nav>

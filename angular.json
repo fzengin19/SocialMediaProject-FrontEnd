@@ -23,7 +23,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -96,6 +97,40 @@
           }
         }
       }
+    },
+    "chatlib": {
+      "projectType": "library",
+      "root": "projects/chatlib",
+      "sourceRoot": "projects/chatlib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/chatlib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/chatlib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/chatlib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/chatlib/src/test.ts",
+            "tsConfig": "projects/chatlib/tsconfig.spec.json",
+            "karmaConfig": "projects/chatlib/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": "29fdd275-412c-4f4c-9724-5449e87b646f"
   }
 }

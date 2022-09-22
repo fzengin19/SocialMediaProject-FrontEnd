@@ -1,0 +1,15 @@
+<div class="messages-box" style="overflow-y: scroll; max-height: 530px;">
+    <div class="list-group rounded-0" *ngFor="let contact of contacts">
+      <a  (click)="setCurrentChat(contact)" class="list-group-item user list-group-item-action text-dark rounded-0" [class]="openChat(contact.contactId)" >
+        <div class="media"><img src="https://bootstrapious.com/i/snippets/sn-chat/avatar.svg" alt="user" width="50" class="rounded-circle">
+          <div class="media-body ml-4 justify-content-end">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <h6 class="mb-0">{{contact.contactName}}</h6><small class="small font-weight-bold">25 Dec</small>
+            </div>
+            <p class="font-italic mb-0 text-small">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+        </div>
+      </a>
+      <hr>
+    </div>
+  </div>
